@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* -- header.jsp header start --*/
+.header_wrap{
+	padding:5% 0;
+}
+.header_wrap div{
+	display:inline-block;
+}
+.header_wrap .logo{
+	font-size:50px;
+	font-family: 'Gaegu', cursive;
+}
+
+
+/* -- footer.jsp footer start --*/
+#footer > p{
+	font-family: 'Gaegu', cursive;
+	font-size:25px;
+}
