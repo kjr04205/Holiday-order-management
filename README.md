@@ -6,5 +6,6 @@
 ### 프로젝트 설명
 > 1. 고객 데이터베이스 구축(고객성명, 전화번호, 주소, 주문내용, 입금여부, 특이사항)<br><br>
 ![image](https://user-images.githubusercontent.com/63985698/150622516-2486bf3a-0fd6-4f77-b050-2f650189ed86.png)
-![image](https://user-images.githubusercontent.com/63985698/150622654-caae3a07-ec3c-4e5c-bbd6-4744ac6b0af2.png)
+![image](https://user-images.githubusercontent.com/63985698/150623215-8f8564bb-739b-416c-b2fb-e292e683cc83.png)
+
 
