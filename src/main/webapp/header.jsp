@@ -17,11 +17,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Gowun+Batang&display=swap" rel="stylesheet">
 
 </head>
+<script>
+	function onPage(){
+		//location.href="write.jsp";
+		window.open('write.jsp','주문등록','width=500,height:300');
+	}
+</script>
 <body>
 	<div id="container">
 		<header id="header">
 			<div class="header_wrap">
-				<h1 class="logo">앗 왠떡이야</h1>
+				<h1 class="logo" onclick="location.href='index.jsp'">앗 왠떡이야</h1>
+			</div>
+			<div class="nav_wrap">
+				<ul>
+					<li onclick="onPage();">주문등록하기</li>
+					<li>주문삭제하기</li>
+				</ul>
 			</div>
 		</header>
 	

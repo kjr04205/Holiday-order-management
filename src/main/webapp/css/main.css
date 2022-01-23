@@ -3,6 +3,8 @@
 /* -- header.jsp header start --*/
 .header_wrap{
 	padding:5% 0;
+	display:inline-block;
+	width:20%;
 }
 .header_wrap div{
 	display:inline-block;
@@ -11,7 +13,27 @@
 	font-size:50px;
 	font-family: 'Gaegu', cursive;
 	color:#FFC81E;
+	cursor:pointer;
 }
+.nav_wrap{
+	display:inline-block;
+	width:79%;
+	text-align:right;
+}
+.nav_wrap ul{
+	width:100%;
+}
+.nav_wrap ul li{
+	display:inline-block;
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:-1.1px;
+	cursor:pointer;
+}
+.nav_wrap ul li:nth-child(1){
+	margin-right:5%;
+}
+
 
 /* -- table design start --*/
 table {
@@ -35,8 +57,42 @@ table td {
   border-bottom: 1px solid #ccc;
 }
 
+
+/* 주문등록 */
+/*#form1{
+	width:100%;
+	margin:5% auto;
+	text-align:center;
+}
+
+
+.textbox{
+	display:block;
+	margin:2% auto;
+	padding:1% 0;
+	width:50%;
+}*/
+#form1{
+	margin-top:20px;
+}
+
+input {
+     display:block;
+     padding: 15px 10px;
+     margin:5px;
+     width:400px;
+}
+
+#form1 label{
+	font-size:15px;
+	letter-spacing:-1px;
+	padding:5px;
+}
+
+
+
 /* -- footer.jsp footer start --*/
 #footer > p{
 	font-family: 'Gaegu', cursive;
-	font-size:25px;
+	font-size:24px;
 }
