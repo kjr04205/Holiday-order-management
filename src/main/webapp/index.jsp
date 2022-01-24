@@ -22,7 +22,7 @@
 				<th>전화번호</th>
 				<th>주소</th>
 				<th>주문내용</th>
-				<th>입금여부</th>
+				<th>금액</th>
 				<th>특이사항</th>
 			</tr>
 		</thead>
@@ -40,7 +40,7 @@
 				<td><%= list.get(i).getMemberOrder() %></td>
 				<td><%= list.get(i).getMemberMoney() %></td>
 				<td><%= list.get(i).getMemberInfo() %></td>
-			</tr>
+			</tr>  
 			<%
 				}
 			%>

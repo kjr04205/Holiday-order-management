@@ -46,4 +46,21 @@ public class MemberDAO {
 		
 		return list;
 	}
+	
+	public int write(String memberName, int memberPhone, String memberAddress, String memberOrder, int memberMoney, String memberInfo) {
+		String SQL = "INSERT INTO member VALUES (?, ?, ?, ?, ?, ?)";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, memberName);
+			pstmt.setInt(2, memberPhone);
+			pstmt.setString(3, memberAddress);
+			pstmt.setString(4, memberOrder);
+			pstmt.setInt(5, memberMoney);
+			pstmt.setString(6, memberInfo);
+			return pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }

@@ -7,7 +7,6 @@ public class Member {
 	private String memberOrder;
 	private int memberMoney;
 	private String memberInfo;
-	
 	public String getMemberName() {
 		return memberName;
 	}
@@ -44,6 +43,5 @@ public class Member {
 	public void setMemberInfo(String memberInfo) {
 		this.memberInfo = memberInfo;
 	}
-	
 	
 }
