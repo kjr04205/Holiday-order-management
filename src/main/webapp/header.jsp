@@ -20,7 +20,7 @@
 <script>
 	function onPage(){
 		//location.href="write.jsp";
-		window.open('write.jsp','주문등록','width=500,height:300');
+		window.open('write.jsp', '주문등록', "height=550,width=450,status=yes,toolbar=no,menubar=no,location=no,left=500, top=100");
 	}
 </script>
 <body>

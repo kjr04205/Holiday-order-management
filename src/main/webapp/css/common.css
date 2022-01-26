@@ -14,7 +14,9 @@
 #footer{
 	position:fixed;
 	bottom:0;
-	padding:2% 0;
+	padding:1.5% 0;
 	width:100%;
 	text-align:center;
+	background:#fff;
+	z-index:999;
 }

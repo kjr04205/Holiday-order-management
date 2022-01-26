@@ -7,7 +7,8 @@
 
 <%@include file="header.jsp"%>
 	<%-- <h1>명절 주문관리 프로그램</h1> --%>
-	<table id="member_container">
+	<div id="table_wrap">
+		<table id="member_container">
 		<colgroup>
 			<col width="10%">
 			<col width="20%">
@@ -47,4 +48,6 @@
 			
 		</tbody>
 	</table>
+	</div>
+	
 <%@include file="footer.jsp"%>

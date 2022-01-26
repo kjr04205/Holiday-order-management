@@ -26,21 +26,27 @@
 <html>
 <body>
 	<%
-		MemberDAO memberDAO = new MemberDAO();
-		int result = memberDAO.write(member.getMemberName(), member.getMemberPhone(), member.getMemberAddress(), member.getMemberOrder(), member.getMemberMoney(), member.getMemberInfo());
-		if(result == -1){
-			PrintWriter script = response.getWriter();
-			script.println("<script>");
-			script.println("alert('주문정보등록에 실패하였습니다. 관리자에게 문의하세요.')");
-			script.println("history.back()");
-			script.println("</script>");
-		}else{
-			PrintWriter script = response.getWriter();
-			script.println("<script>");
-			script.println("alert('주문정보등록 완료하였습니다.')");
-			script.println("window.close()");
-			script.println("</script>");
+		try{
+			MemberDAO memberDAO = new MemberDAO();
+			int result = memberDAO.write(member.getMemberName(), member.getMemberPhone(), member.getMemberAddress(), member.getMemberOrder(), member.getMemberMoney(), member.getMemberInfo());
+			if(result == -1){
+				PrintWriter script = response.getWriter();
+				script.println("<script>");
+				script.println("alert('주문정보등록에 실패하였습니다. 관리자에게 문의하세요.')");
+				script.println("history.back()");
+				script.println("</script>");
+			}else{
+				PrintWriter script = response.getWriter();
+				script.println("<script>");
+				script.println("alert('주문정보등록 완료하였습니다.')");
+				script.println("opener.location.reload()");
+				script.println("window.close()");
+				script.println("</script>");
+			}
+		}catch(Exception e){
+			e.printStackTrace();
 		}
+		
 		
 	%>
 </body>
