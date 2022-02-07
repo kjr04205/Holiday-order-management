@@ -32,7 +32,7 @@
 			<div class="nav_wrap">
 				<ul>
 					<li onclick="onPage();">주문등록하기</li>
-					<li>주문삭제하기</li>
+					<%-- <li>주문삭제하기</li>--%>
 				</ul>
 			</div>
 		</header>

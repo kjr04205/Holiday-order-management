@@ -25,19 +25,20 @@ public class MemberDAO {
 	}
 	
 	public ArrayList<Member> getList(){
-		String SQL = "SELECT * FROM MEMBER";
+		String SQL = "SELECT * FROM MEMBER WHERE memberNumber = 1 ORDER BY memberID DESC";
 		ArrayList<Member> list = new ArrayList<Member>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				Member member = new Member();
-				member.setMemberName(rs.getString(1));
-				member.setMemberPhone(rs.getInt(2));
-				member.setMemberAddress(rs.getString(3));
-				member.setMemberOrder(rs.getString(4));
-				member.setMemberMoney(rs.getInt(5));
-				member.setMemberInfo(rs.getString(6));
+				member.setMemberID(rs.getInt(1));
+				member.setMemberName(rs.getString(2));
+				member.setMemberPhone(rs.getInt(3));
+				member.setMemberAddress(rs.getString(4));
+				member.setMemberOrder(rs.getString(5));
+				member.setMemberMoney(rs.getInt(6));
+				member.setMemberInfo(rs.getString(7));
 				list.add(member);
 			}
 		}catch(Exception e) {
@@ -48,15 +49,44 @@ public class MemberDAO {
 	}
 	
 	public int write(String memberName, int memberPhone, String memberAddress, String memberOrder, int memberMoney, String memberInfo) {
-		String SQL = "INSERT INTO member VALUES (?, ?, ?, ?, ?, ?)";
+		String SQL = "INSERT INTO member VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, memberName);
-			pstmt.setInt(2, memberPhone);
-			pstmt.setString(3, memberAddress);
-			pstmt.setString(4, memberOrder);
-			pstmt.setInt(5, memberMoney);
-			pstmt.setString(6, memberInfo);
+			pstmt.setInt(1, getNext());
+			pstmt.setString(2, memberName);
+			pstmt.setInt(3, memberPhone);
+			pstmt.setString(4, memberAddress);
+			pstmt.setString(5, memberOrder);
+			pstmt.setInt(6, memberMoney);
+			pstmt.setString(7, memberInfo);
+			pstmt.setInt(8, 1);
+			return pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
+	
+	public int getNext() {
+		String SQL = "SELECT memberID FROM MEMBER ORDER BY memberID DESC";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				return rs.getInt(1) + 1;
+			}
+			return 1;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+	}
+	
+	public int delete(int memberNumber) {
+		String SQL = "UPDATE MEMBER SET memberNumber = 0 WHERE memberID = ?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1, memberNumber);
 			return pstmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();

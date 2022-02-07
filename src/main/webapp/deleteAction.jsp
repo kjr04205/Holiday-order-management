@@ -6,13 +6,8 @@
 <%@ page import="java.util.ArrayList" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 <jsp:useBean id="member" class="member.Member" scope="page" />
-<jsp:setProperty name="member" property="memberName" />
-<jsp:setProperty name="member" property="memberPhone" />
-<jsp:setProperty name="member" property="memberAddress" />
-<jsp:setProperty name="member" property="memberOrder" />
-<jsp:setProperty name="member" property="memberMoney" />
-<jsp:setProperty name="member" property="memberInfo" />
 <jsp:setProperty name="member" property="memberNumber" />
+<jsp:setProperty name="member" property="memberID" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,27 +22,29 @@
 <html>
 <body>
 	<%
+		int memberID = 0;
+		if(request.getParameter("memberID") != null){
+			memberID = Integer.parseInt(request.getParameter("memberID"));
+		}
 		try{
 			MemberDAO memberDAO = new MemberDAO();
-			int result = memberDAO.write(member.getMemberName(), member.getMemberPhone(), member.getMemberAddress(), member.getMemberOrder(), member.getMemberMoney(), member.getMemberInfo());
+			int result = memberDAO.delete(memberID);
 			if(result == -1){
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("alert('주문정보등록에 실패하였습니다. 관리자에게 문의하세요.')");
+				script.println("alert('삭제에 실패하였습니다. 관리자에게 문의해주세요.')");
 				script.println("history.back()");
 				script.println("</script>");
 			}else{
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("alert('주문정보등록 완료하였습니다.')");
-				script.println("opener.location.reload()");
-				script.println("window.close()");
+				script.println("alert('삭제가 완료되었습니다.')");
+				script.println("location.href='index.jsp'");
 				script.println("</script>");
 			}
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
 		
 	%>
 </body>
