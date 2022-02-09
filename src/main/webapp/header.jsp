@@ -9,6 +9,8 @@
 <head>
 <meta charset="UTF-8">
 <title>HOM(Holiday order management)</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
 <link type="text/css" rel="stylesheet" href="css/common.css"></link>
 <link type="text/css" rel="stylesheet" href="css/reset.css"></link>
 <link type="text/css" rel="stylesheet" href="css/main.css"></link>
@@ -22,6 +24,7 @@
 		//location.href="write.jsp";
 		window.open('write.jsp', '주문등록', "height=550,width=450,status=yes,toolbar=no,menubar=no,location=no,left=500, top=100");
 	}
+	
 </script>
 <body>
 	<div id="container">
@@ -32,6 +35,8 @@
 			<div class="nav_wrap">
 				<ul>
 					<li onclick="onPage();">주문등록하기</li>
+					<li onclick="onSelectBefore();" class="before_list">전체주문확인</li>
+					<li onclick="onSelectAfter();" class="after_list texton">남은주문확인</li>
 					<%-- <li>주문삭제하기</li>--%>
 				</ul>
 			</div>

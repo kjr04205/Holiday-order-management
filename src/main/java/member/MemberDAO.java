@@ -48,6 +48,30 @@ public class MemberDAO {
 		return list;
 	}
 	
+	public ArrayList<Member> getList2(){
+		String SQL = "SELECT * FROM MEMBER ORDER BY memberID DESC";
+		ArrayList<Member> list = new ArrayList<Member>();
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				Member member = new Member();
+				member.setMemberID(rs.getInt(1));
+				member.setMemberName(rs.getString(2));
+				member.setMemberPhone(rs.getInt(3));
+				member.setMemberAddress(rs.getString(4));
+				member.setMemberOrder(rs.getString(5));
+				member.setMemberMoney(rs.getInt(6));
+				member.setMemberInfo(rs.getString(7));
+				list.add(member);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+	
 	public int write(String memberName, int memberPhone, String memberAddress, String memberOrder, int memberMoney, String memberInfo) {
 		String SQL = "INSERT INTO member VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 		try {

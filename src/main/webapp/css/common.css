@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+.texton{
+	color:#FFC81E;
+}
+.none{
+	display:none;
+}
+.show{
+	display:table-row-group;
+}
+
 #header, #footer, #container{
 	max-width:1200px;
 }
