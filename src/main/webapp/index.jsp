@@ -6,8 +6,10 @@
 <%@ page import="java.util.ArrayList" %>
 
 <%@include file="header.jsp"%>
-	
-	<input onkeyup="filter()" type="text" id="value" placeholder="전화번호를 검색해주세요.">
+	<div class="search">
+		<input onkeyup="filter()" type="text" id="value" placeholder="🔎 전화번호를 검색해주세요.">
+		<%-- <i class="material-icons">search</i>--%>
+	</div>
 	
 	<div id="table_wrap">
 		<table id="member_container">

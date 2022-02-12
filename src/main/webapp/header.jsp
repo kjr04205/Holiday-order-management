@@ -17,12 +17,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Gowun+Batang&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
 </head>
 <script>
 	function onPage(){
 		//location.href="write.jsp";
-		window.open('write.jsp', '주문등록', "height=550,width=450,status=yes,toolbar=no,menubar=no,location=no,left=500, top=100");
+		window.open('write.jsp', '주문등록', "height=630,width=450,status=yes,toolbar=no,menubar=no,location=no,left=500, top=100");
 	}
 	
 </script>
