@@ -18,8 +18,16 @@
 > memberNumber(INT) - 글 공개, 비공개 여부
 <br><br>
 
-## HOM APP version
-### version 1.0(런칭 - 2022.01.31)
+### 주요 기능
+- Form을 통해 고객과 주문정보를 입력하여 리스트에 자동등록됨<br><br>
+![Hnet-image (1)](https://user-images.githubusercontent.com/63985698/153756448-b1e27638-f6a9-4f7d-8a6e-f6ea3de6b213.gif)
+<br><br>
+- 전체 주문과 아직 찾아가지 않은 주문을 나누어 볼 수 있음<br><br>
+ ![Hnet-image (2)](https://user-images.githubusercontent.com/63985698/153756599-284b1540-77d8-4c4d-b298-2eb9968757f2.gif)
+<br><br>
+<br><br>
+### HOM APP version
+#### -version 1.0(런칭 - 2022.01.31)
 <br><br>
 
 ### 업데이트 내역
@@ -31,4 +39,6 @@
 - 검색기능 추가(전화번호 검색시 실시간으로 리스트에서 조회 - 별도의 엔터키, Submit 없이)
 - 전체주문확인, 남은주문확인 메뉴 추가 / DB에서 리스트 조회시 조건 다르게 하여 JAVA(DB Mysql) 데이터 호출
 
+> 2022.02.12
+- 관리자의 이해를 돕기 위한 Form UI 추가 및 변경(주문등록, 검색)
 
