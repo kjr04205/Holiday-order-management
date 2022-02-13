@@ -36,6 +36,12 @@
 			</tr>
 		</thead>
 		
+		<style>
+			.money:after{
+				content:"원";
+			}
+		</style>
+		
 		<tbody class="after">
 			<%
 				MemberDAO memberDAO = new MemberDAO();
@@ -48,7 +54,7 @@
 				<td class="name"><%= list.get(i).getMemberPhone() %></td>
 				<td><%= list.get(i).getMemberAddress() %></td>
 				<td><%= list.get(i).getMemberOrder() %></td>
-				<td><%= list.get(i).getMemberMoney() %></td>
+				<td class="money"><%= list.get(i).getMemberMoney() %></td>
 				<td><%= list.get(i).getMemberInfo() %></td>
 				<td><a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?memberID=<%= list.get(i).getMemberID() %>">x</a></td>
 			</tr>  
@@ -70,7 +76,7 @@
 				<td class="name"><%= list2.get(i).getMemberPhone() %></td>
 				<td><%= list2.get(i).getMemberAddress() %></td>
 				<td><%= list2.get(i).getMemberOrder() %></td>
-				<td><%= list2.get(i).getMemberMoney() %></td>
+				<td class="money"><%= list2.get(i).getMemberMoney() %></td>
 				<td><%= list2.get(i).getMemberInfo() %></td>
 				<td>&nbsp;</td>
 			</tr>  

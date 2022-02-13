@@ -78,21 +78,6 @@ table td {
   border-bottom: 1px solid #ccc;
 }
 
-
-/* 주문등록 */
-/*#form1{
-	width:100%;
-	margin:5% auto;
-	text-align:center;
-}
-
-
-.textbox{
-	display:block;
-	margin:2% auto;
-	padding:1% 0;
-	width:50%;
-}*/
 #form1{
 	margin-top:20px;
 }
@@ -102,6 +87,9 @@ input {
      padding: 15px 10px;
      margin:5px;
      width:400px;
+}
+input::placeholder {
+     font-size:12px;
 }
 
 #form1 label{
