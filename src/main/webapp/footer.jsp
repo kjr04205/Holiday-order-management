@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
     
 	    <footer id="footer">
-		    <p>
+		    <%-- <p>
 		        copyright &copy; HYOIN 2022. All rights reserved.
-		    </p>
+		    </p> --%>
 		</footer>
 	</div>
 </body>
